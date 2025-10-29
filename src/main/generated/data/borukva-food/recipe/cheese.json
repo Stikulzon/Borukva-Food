@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     "#c:buckets/milk",
-    "#c:salts",
+    "#c:salt",
     "#c:eggs"
   ],
   "result": {

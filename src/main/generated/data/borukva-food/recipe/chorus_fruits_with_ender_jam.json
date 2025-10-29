@@ -4,7 +4,7 @@
   "ingredients": [
     "minecraft:bowl",
     "minecraft:chorus_fruit",
-    "#c:jams"
+    "#c:jam"
   ],
   "result": {
     "count": 1,

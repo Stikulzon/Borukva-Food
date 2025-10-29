@@ -436,7 +436,7 @@ public class ModRecipeGenerator extends RecipeGenerator {
                 .criterion(hasItem(Items.DISPENSER), conditionsFromItem(Items.DISPENSER))
                 .offerTo(exporter);
 
-        createShapeless(RecipeCategory.FOOD, ModItems.RICE_PANICLE, 3)
+        createShapeless(RecipeCategory.FOOD, ModItems.RICE, 3)
                 .input(ModItems.RICE_PANICLE)
                 .criterion(hasItem(ModItems.RICE_PANICLE), conditionsFromItem(ModItems.RICE_PANICLE))
                 .offerTo(exporter);

@@ -14,10 +14,10 @@
       "base": "#c:crops/onion"
     },
     {
-      "base": "#c:cooking_oils"
+      "base": "#c:cooking_oil"
     },
     {
-      "base": "#c:salts"
+      "base": "#c:salt"
     }
   ],
   "output": {

@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "B": "minecraft:bowl",
-    "R": "#c:grains/rice"
+    "R": "#c:crops/rice"
   },
   "pattern": [
     "RRR",

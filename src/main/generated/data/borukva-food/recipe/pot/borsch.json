@@ -20,7 +20,7 @@
       "base": "#c:foods/raw_meat"
     },
     {
-      "base": "#c:salts"
+      "base": "#c:salt"
     }
   ],
   "output": {

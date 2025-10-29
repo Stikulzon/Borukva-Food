@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "C": "#c:cheeses",
+    "C": "#c:cheese",
     "J": "#minecraft:meat",
     "K": "borukva-food:ketchup",
     "M": "borukva-food:mayonnaise",

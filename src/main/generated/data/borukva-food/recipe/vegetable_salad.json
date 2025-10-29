@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     "#c:foods/vegetables/lettuce",
-    "#c:cooking_oils",
+    "#c:cooking_oil",
     "#c:foods/sauce",
     "borukva-food:cucumber_slices",
     "borukva-food:tomato_slices",

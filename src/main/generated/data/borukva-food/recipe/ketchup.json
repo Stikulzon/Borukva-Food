@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     "#c:crops/tomato",
-    "#c:salts",
+    "#c:dusts/salt",
     "minecraft:sugar"
   ],
   "result": {

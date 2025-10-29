@@ -4,7 +4,7 @@
   "ingredients": [
     "#c:crops/wheat",
     "#c:eggs",
-    "#c:jams"
+    "#c:jam"
   ],
   "result": {
     "count": 1,

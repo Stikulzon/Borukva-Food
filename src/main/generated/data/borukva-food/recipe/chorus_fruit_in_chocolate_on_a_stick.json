@@ -4,7 +4,7 @@
   "ingredients": [
     "#c:rods/wooden",
     "minecraft:chorus_fruit",
-    "#c:chocolates"
+    "#c:chocolate"
   ],
   "result": {
     "count": 1,

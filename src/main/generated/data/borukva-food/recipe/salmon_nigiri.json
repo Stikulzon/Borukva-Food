@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     "#c:foods/raw_fishes/salmon",
-    "#c:grains/rice",
+    "#c:crops/rice",
     "#c:sea_lettuce"
   ],
   "result": {

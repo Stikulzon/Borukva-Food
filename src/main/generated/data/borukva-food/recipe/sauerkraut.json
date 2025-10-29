@@ -6,7 +6,7 @@
     "C": "#c:crops/cabbage",
     "G": "minecraft:sugar",
     "J": "#c:crops/carrot",
-    "S": "#c:salts"
+    "S": "#c:salt"
   },
   "pattern": [
     "SGS",

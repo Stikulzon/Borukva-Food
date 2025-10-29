@@ -5,7 +5,7 @@
     "C": "#c:crops/cucumber",
     "E": "#c:jars/empty",
     "P": "minecraft:sugar",
-    "S": "#c:salts"
+    "S": "#c:salt"
   },
   "pattern": [
     "SPS",

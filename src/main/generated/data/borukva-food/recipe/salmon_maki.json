@@ -4,7 +4,7 @@
   "ingredients": [
     "#c:sea_lettuce",
     "#c:foods/raw_fishes/salmon",
-    "#c:grains/rice",
+    "#c:crops/rice",
     [
       "borukva-food:cucumber_slices",
       "borukva-food:guacamole"

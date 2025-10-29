@@ -2,9 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "#c:cooking_oils",
+    "#c:cooking_oil",
     "#c:eggs",
-    "#c:lemons"
+    "#c:lemon"
   ],
   "result": {
     "count": 1,
