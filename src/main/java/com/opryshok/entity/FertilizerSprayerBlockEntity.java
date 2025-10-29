@@ -149,7 +149,7 @@ public class FertilizerSprayerBlockEntity extends LockableBlockEntity implements
         }
         @Override
         public void onTick() {
-            if (player.getPos().squaredDistanceTo(Vec3d.ofCenter(FertilizerSprayerBlockEntity.this.pos)) > (18 * 18)) {
+            if (player.getEntityPos().squaredDistanceTo(Vec3d.ofCenter(FertilizerSprayerBlockEntity.this.pos)) > (18 * 18)) {
                 this.close();
             }
             super.onTick();

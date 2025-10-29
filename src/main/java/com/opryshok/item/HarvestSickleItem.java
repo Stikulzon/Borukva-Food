@@ -39,7 +39,7 @@ public class HarvestSickleItem extends MiningToolItem implements PolymerItem {
         PlayerEntity player = context.getPlayer();
 //        ItemStack sickleStack = context.getStack();
 
-        if (!world.isClient && player != null) {
+        if (!world.isClient() && player != null) {
         ItemStack offHandStack = player.getOffHandStack();
             boolean actionPerformed = false;
 
@@ -81,7 +81,7 @@ public class HarvestSickleItem extends MiningToolItem implements PolymerItem {
 
     public static void registerAttackAction() {
         AttackBlockCallback.EVENT.register((player, world, hand, pos, direction) -> {
-            if (!world.isClient && hand == Hand.MAIN_HAND) {
+            if (!world.isClient() && hand == Hand.MAIN_HAND) {
                 ItemStack sickleStack = player.getMainHandStack();
                 if (sickleStack.getItem() instanceof HarvestSickleItem) {
                     boolean brokePlant = false;

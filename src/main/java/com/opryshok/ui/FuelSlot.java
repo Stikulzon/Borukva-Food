@@ -13,7 +13,7 @@ public class FuelSlot extends LedgerSlot {
     }
 
     public boolean canInsert(ItemStack stack) {
-        return player.getWorld().getFuelRegistry().isFuel(stack) || isBucket(stack);
+        return player.getEntityWorld().getFuelRegistry().isFuel(stack) || isBucket(stack);
     }
 
     public int getMaxItemCount(ItemStack stack) {

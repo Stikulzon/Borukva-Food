@@ -48,7 +48,7 @@ public class PickleJarEntity extends ProjectileEntity implements PolymerEntity {
     }
 
     public void tick() {
-        if (!(this.getWorld() instanceof ServerWorld serverWorld)) {
+        if (!(this.getEntityWorld() instanceof ServerWorld serverWorld)) {
             return;
         }
         super.tick();
@@ -69,7 +69,7 @@ public class PickleJarEntity extends ProjectileEntity implements PolymerEntity {
         if (this.isOnFire()) {
             this.discard();
         }
-        List<Entity> entities = this.getWorld().getOtherEntities(this, this.getBoundingBox().expand(0.5), entity -> entity instanceof MobEntity);
+        List<Entity> entities = this.getEntityWorld().getOtherEntities(this, this.getBoundingBox().expand(0.5), entity -> entity instanceof MobEntity);
         if (!entities.isEmpty()) {
             for (Entity entity : entities) {
                 int damage = entity instanceof PhantomEntity ? 100 : 0;
@@ -83,8 +83,8 @@ public class PickleJarEntity extends ProjectileEntity implements PolymerEntity {
         double x = pos.getX();
         double y = pos.getY();
         double z = pos.getZ();
-        this.getWorld().playSound(null, pos, SoundEvents.ENTITY_SPLASH_POTION_BREAK, SoundCategory.NEUTRAL);
-        ItemScatterer.spawn(this.getWorld(), x, y, z, new ItemStack(ModItems.PICKLE, 3));
+        this.getEntityWorld().playSound(null, pos, SoundEvents.ENTITY_SPLASH_POTION_BREAK, SoundCategory.NEUTRAL);
+        ItemScatterer.spawn(this.getEntityWorld(), x, y, z, new ItemStack(ModItems.PICKLE, 3));
         this.discard();
     }
     @Override

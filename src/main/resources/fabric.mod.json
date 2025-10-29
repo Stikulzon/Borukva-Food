@@ -27,12 +27,10 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.16.14",
-		"minecraft": ">=1.21.6",
+		"minecraft": ">=1.21.9",
 		"java": ">=21",
 		"fabric-api": "*",
-		"polymer-core": ">=0.13.3",
-		"polymer-resource-pack": ">=0.13.3",
-		"polymer-virtual-entity": ">=0.13.3"
+		"polymer-core": ">=0.14.3"
 	},
 	"suggests": {
 		"another-mod": "*"

@@ -172,7 +172,7 @@ public class StoveBlockEntity extends LockableBlockEntity implements MinimalSide
 
         @Override
         public void onTick() {
-            if (player.getPos().squaredDistanceTo(Vec3d.ofCenter(StoveBlockEntity.this.pos)) > (18 * 18)) {
+            if (player.getEntityPos().squaredDistanceTo(Vec3d.ofCenter(StoveBlockEntity.this.pos)) > (18 * 18)) {
                 this.close();
             }
 

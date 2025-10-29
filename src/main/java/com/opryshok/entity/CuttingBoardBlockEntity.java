@@ -104,7 +104,7 @@ public class CuttingBoardBlockEntity extends LockableBlockEntity implements Mini
                 currentRecipe = serverWorld.getRecipeManager().getFirstMatch(ModRecipeTypes.CUTTING_BOARD, input, world).orElse(null);
             }
             if(currentRecipe != null){
-                tool.damage(1, player, LivingEntity.getSlotForHand(player.getActiveHand()));
+                tool.damage(1, player, player.getActiveHand().getEquipmentSlot());
 
                 BorukvaFoodUtil.ledgerMixinInvoke();
 

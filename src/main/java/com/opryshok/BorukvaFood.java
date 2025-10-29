@@ -23,6 +23,9 @@ import com.opryshok.ui.GuiTextures;
 import com.opryshok.ui.UiResourceCreator;
 import com.opryshok.utils.*;
 import com.opryshok.world.gen.ModWorldGeneration;
+import eu.midnightdust.lib.config.EntryInfo;
+import eu.midnightdust.lib.config.MidnightConfig;
+import eu.midnightdust.lib.util.PlatformFunctions;
 import eu.pb4.polymer.resourcepack.api.PolymerResourcePackUtils;
 import eu.pb4.polymer.resourcepack.extras.api.ResourcePackExtras;
 import net.fabricmc.api.ModInitializer;
@@ -32,14 +35,24 @@ import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.lang.reflect.Field;
+
 public class BorukvaFood implements ModInitializer {
 
 	public static final String MOD_ID = "borukva-food";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+    public static MidnightConfig configInstance;
 
 	@Override
 	public void onInitialize() {
-		ModConfig.init(MOD_ID, ModConfig.class);
+        configInstance = MidnightConfig.createInstance(MOD_ID, ModConfig.class);
+        for(Field field : ModConfig.class.getFields()) {
+            if ((field.isAnnotationPresent(MidnightConfig.Entry.class) || field.isAnnotationPresent(MidnightConfig.Comment.class)) && !field.isAnnotationPresent(MidnightConfig.Server.class) && !field.isAnnotationPresent(MidnightConfig.Hidden.class) && PlatformFunctions.isClientEnv()) {
+                configInstance.addClientEntry(field, new EntryInfo(field, MOD_ID));
+            }
+        }
+        configInstance.loadValuesFromJson();
+
 		ModCommands.register();
 		ModItems.registerModItems();
 		ModBlocks.registerBlocks();

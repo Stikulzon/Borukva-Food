@@ -65,7 +65,7 @@ public class LemonFruitLeaves extends TintedParticleLeavesBlock implements Polym
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
-        if (!world.isClient && player != null && state.get(HAS_FRUIT)) {
+        if (!world.isClient() && player != null && state.get(HAS_FRUIT)) {
             dropStack(world, pos, player.getMovementDirection().getOpposite(), getFruitDropStack(1));
             world.playSound(null, pos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1f, 1f);
             if(!state.get(PERSISTENT)){

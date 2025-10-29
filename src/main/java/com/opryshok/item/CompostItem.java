@@ -36,7 +36,7 @@ public class CompostItem extends SimplePolymerItem {
             if (state.getBlock() instanceof SaplingBlock|| state.getBlock() instanceof MossBlock) {
                 Fertilizable block = (Fertilizable) state.getBlock();
                 if (block.isFertilizable(world, pos, state)) {
-                    if (!world.isClient) {
+                    if (!world.isClient()) {
                         if (block.canGrow(world, world.random, pos, state)) {
                             block.grow(world, world.random, pos, state);
                         }

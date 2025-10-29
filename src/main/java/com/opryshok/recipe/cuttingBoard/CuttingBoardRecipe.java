@@ -31,7 +31,7 @@ public record CuttingBoardRecipe (String group, CountedIngredient input, ItemSta
 
     @Override
     public boolean matches(CuttingBoardInput input, World world) {
-        if(world.isClient){
+        if(world.isClient()){
             return false;
         }
         return this.input.test(input.getStackInSlot(0));

@@ -29,7 +29,7 @@ public class HoeItemMixin {
     @Inject(method = "useOnBlock", at = @At("HEAD"), cancellable = true)
     public void replaceFarmland(ItemUsageContext context, CallbackInfoReturnable<ActionResult> cir){
         World world = context.getWorld();
-        if (!world.isClient){
+        if (!world.isClient()){
             BlockPos blockPos = context.getBlockPos();
             BlockState blockState = world.getBlockState(blockPos);
             if (blockState.isOf(Blocks.FARMLAND) && blockState.getProperties().size() == 1){

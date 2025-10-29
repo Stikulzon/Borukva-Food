@@ -39,7 +39,7 @@ public record PotRecipe(String group, List<CountedIngredient> input, CountedIngr
 
     @Override
     public boolean matches(PotInput inventory, World world) {
-        if (world.isClient) {
+        if (world.isClient()) {
             return false;
         }
 

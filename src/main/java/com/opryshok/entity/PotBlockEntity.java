@@ -248,7 +248,7 @@ public class PotBlockEntity extends LockableBlockEntity implements MinimalSidedI
         }
         @Override
         public void onTick() {
-            if (player.getPos().squaredDistanceTo(Vec3d.ofCenter(PotBlockEntity.this.pos)) > (18 * 18)) {
+            if (player.getEntityPos().squaredDistanceTo(Vec3d.ofCenter(PotBlockEntity.this.pos)) > (18 * 18)) {
                 this.close();
             }
             this.setSlot(13, GuiTextures.PROGRESS_HORIZONTAL_OFFSET_RIGHT.get(progress()));

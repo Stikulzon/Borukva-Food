@@ -39,7 +39,7 @@ public class KnifeTool extends MiningToolItem implements PolymerItem {
             int i = state.get(ModProperties.SLICES);
 
             ItemScatterer.spawn(world, player.getX(), player.getY(), player.getZ(), new ItemStack(block.getSlice(), 1));
-            player.getStackInHand(Hand.MAIN_HAND).damage(1, player, LivingEntity.getSlotForHand(Hand.MAIN_HAND));
+            player.getStackInHand(Hand.MAIN_HAND).damage(1, player, Hand.MAIN_HAND.getEquipmentSlot());
             if (i == 7){
                 BorukvaFoodUtil.ledgerMixinInvoke();
                 world.removeBlock(pos, false);

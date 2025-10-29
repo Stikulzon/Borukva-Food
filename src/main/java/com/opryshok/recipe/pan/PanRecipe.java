@@ -30,7 +30,7 @@ public record PanRecipe (String group, CountedIngredient input, ItemStack output
     }
     @Override
     public boolean matches(PanInput input, World world) {
-        if(world.isClient){
+        if(world.isClient()){
             return false;
         }
         return this.input.test(input.getStackInSlot(0));

@@ -160,10 +160,10 @@ public class ModifyLootTables {
         RegistryWrapper.Impl<Enchantment> impl = registries.getOrThrow(RegistryKeys.ENCHANTMENT);
         return AnyOfLootCondition.builder(
             EntityPropertiesLootCondition.builder(
-                LootContext.EntityTarget.THIS, EntityPredicate.Builder.create().flags(EntityFlagsPredicate.Builder.create().onFire(true))
+                LootContext.EntityReference.THIS, EntityPredicate.Builder.create().flags(EntityFlagsPredicate.Builder.create().onFire(true))
             ),
             EntityPropertiesLootCondition.builder(
-                LootContext.EntityTarget.DIRECT_ATTACKER,
+                LootContext.EntityReference.DIRECT_ATTACKER,
                 EntityPredicate.Builder.create()
                     .equipment(
                         EntityEquipmentPredicate.Builder.create()

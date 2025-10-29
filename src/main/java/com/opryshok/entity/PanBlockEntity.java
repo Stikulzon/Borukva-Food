@@ -191,7 +191,7 @@ public class PanBlockEntity extends LockableBlockEntity implements MinimalSidedI
         }
         @Override
         public void onTick() {
-            if (player.getPos().squaredDistanceTo(Vec3d.ofCenter(PanBlockEntity.this.pos)) > (18 * 18)) {
+            if (player.getEntityPos().squaredDistanceTo(Vec3d.ofCenter(PanBlockEntity.this.pos)) > (18 * 18)) {
                 this.close();
             }
             this.setSlot(13, GuiTextures.FLAME.get(PanBlockEntity.this.active ? 1 : 0));
